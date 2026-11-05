@@ -21,13 +21,13 @@ jobs:
           mkdir -p game_assets
           unzip -q game_dump.zip -d game_assets/
 
-      - name: Run Native Recompilation Builder
+name: Run Native Recompilation Builder
         run: |
           chmod +x ./make-ios.sh
           ./make-ios.sh --ipa
 
       - name: Upload Finished IPA Artifact
-        uses: actions/upload-artifact@v4.1.8
+        uses: actions/upload-artifact@v4
         with:
           name: MarioKartNativeIPA
           path: build/Mush8.ipa
