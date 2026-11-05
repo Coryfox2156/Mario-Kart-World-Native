@@ -7,7 +7,7 @@ jobs:
     runs-on: macos-14
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
 
       - name: Install System Dependencies
         run: |
@@ -27,7 +27,7 @@ jobs:
           ./make-ios.sh --ipa
 
       - name: Upload Finished IPA Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4.1.8
         with:
           name: MarioKartNativeIPA
           path: build/Mush8.ipa
